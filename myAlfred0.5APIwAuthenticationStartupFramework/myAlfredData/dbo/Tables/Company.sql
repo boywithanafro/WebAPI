@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Company]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [CompanyName] NVARCHAR(50) NOT NULL, 
+    [CreateDate] DATETIME2 NOT NULL
+)

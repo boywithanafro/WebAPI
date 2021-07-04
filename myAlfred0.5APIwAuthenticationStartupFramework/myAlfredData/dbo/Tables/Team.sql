@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Team]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [CompanyId] INT NOT NULL
+)
