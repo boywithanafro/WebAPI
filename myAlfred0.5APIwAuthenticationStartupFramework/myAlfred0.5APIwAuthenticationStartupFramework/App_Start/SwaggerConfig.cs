@@ -2,6 +2,7 @@ using System.Web.Http;
 using WebActivatorEx;
 using myAlfred0._5APIwAuthenticationStartupFramework;
 using Swashbuckle.Application;
+using myAlfred0._5APIwAuthenticationStartupFramework.App_Start;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -16,6 +17,9 @@ namespace myAlfred0._5APIwAuthenticationStartupFramework
             GlobalConfiguration.Configuration
                 .EnableSwagger(c =>
                     {
+                        c.DocumentFilter<AuthTokenOperation>();//Add Document Filter of Type AuthTokenOperation (Adds new filter to swagger, run calass that has apply method)
+                        c.OperationFilter<AuthorizationOperationFilter>();//Add to allow for an extra parameter on every method to allow us to input token value
+
                         // By default, the service root url is inferred from the request used to access the docs.
                         // However, there may be situations (e.g. proxy and load-balanced environments) where this does not
                         // resolve correctly. You can workaround this by providing your own code to determine the root URL.
