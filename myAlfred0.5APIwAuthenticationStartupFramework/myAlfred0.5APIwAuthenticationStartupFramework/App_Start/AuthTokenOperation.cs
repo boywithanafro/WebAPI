@@ -13,7 +13,7 @@ namespace myAlfred0._5APIwAuthenticationStartupFramework.App_Start
         {
             swaggerDoc.paths.Add("/token", new PathItem
             {
-                post = new Operation
+                post = new Operation // What the token post request takes in to link to the api
                 {
                     tags = new List<string> { "Auth" },
                     consumes = new List<string>
