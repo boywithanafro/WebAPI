@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myAlfred0.5APIwAuthenticati
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "myAlfredData", "myAlfredData\myAlfredData.sqlproj", "{42FDF872-1029-4A22-82AF-7ACEFFCFCBC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myAlfredFramework.Library", "myAlfredFramework.Library\myAlfredFramework.Library.csproj", "{A60593A7-ACC9-4E2D-B979-12BB572DDFE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myAlfredFrontEnd.Library", "myAlfredFrontEnd.Library\myAlfredFrontEnd.Library.csproj", "{2E77CBE3-8376-48EF-A762-ED483FDEE6A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,14 @@ Global
 		{42FDF872-1029-4A22-82AF-7ACEFFCFCBC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42FDF872-1029-4A22-82AF-7ACEFFCFCBC5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{42FDF872-1029-4A22-82AF-7ACEFFCFCBC5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A60593A7-ACC9-4E2D-B979-12BB572DDFE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A60593A7-ACC9-4E2D-B979-12BB572DDFE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A60593A7-ACC9-4E2D-B979-12BB572DDFE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A60593A7-ACC9-4E2D-B979-12BB572DDFE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E77CBE3-8376-48EF-A762-ED483FDEE6A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E77CBE3-8376-48EF-A762-ED483FDEE6A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E77CBE3-8376-48EF-A762-ED483FDEE6A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E77CBE3-8376-48EF-A762-ED483FDEE6A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

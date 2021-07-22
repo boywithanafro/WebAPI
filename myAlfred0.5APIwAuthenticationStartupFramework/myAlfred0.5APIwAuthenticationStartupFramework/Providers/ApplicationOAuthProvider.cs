@@ -27,7 +27,7 @@ namespace myAlfred0._5APIwAuthenticationStartupFramework.Providers
             _publicClientId = publicClientId;
         }
 
-        public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
+        public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)//2
         {
             var userManager = context.OwinContext.GetUserManager<ApplicationUserManager>();
 
@@ -50,17 +50,20 @@ namespace myAlfred0._5APIwAuthenticationStartupFramework.Providers
             context.Request.Context.Authentication.SignIn(cookiesIdentity);
         }
 
-        public override Task TokenEndpoint(OAuthTokenEndpointContext context)
+        public override Task TokenEndpoint(OAuthTokenEndpointContext context)//4
         {
             foreach (KeyValuePair<string, string> property in context.Properties.Dictionary)
             {
                 context.AdditionalResponseParameters.Add(property.Key, property.Value);
             }
+            var checkRes = Task.FromResult<object>(null);
+
+            //Redirect rect front end
 
             return Task.FromResult<object>(null);
         }
 
-        public override Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
+        public override Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)//1
         {
             // Resource owner password credentials does not provide a client ID.
             if (context.ClientId == null)
@@ -86,7 +89,7 @@ namespace myAlfred0._5APIwAuthenticationStartupFramework.Providers
             return Task.FromResult<object>(null);
         }
 
-        public static AuthenticationProperties CreateProperties(string userName)
+        public static AuthenticationProperties CreateProperties(string userName)//3
         {
             IDictionary<string, string> data = new Dictionary<string, string>
             {
