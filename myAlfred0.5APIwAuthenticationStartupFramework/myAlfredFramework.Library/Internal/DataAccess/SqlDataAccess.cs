@@ -12,6 +12,7 @@ namespace myAlfredFramework.Library.Internal.DataAccess
 {
     internal class SqlDataAccess // Internal as can't be seen or used outside of Library to strengthen security
     { //Read Method, Write Method, ConnectionString
+
         public string GetConnectionString(string name)
         {
             return ConfigurationManager.ConnectionStrings[name].ConnectionString; // Gets connectionString from web.config/app.config

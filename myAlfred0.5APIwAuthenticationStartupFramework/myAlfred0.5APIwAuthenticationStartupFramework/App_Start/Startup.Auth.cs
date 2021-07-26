@@ -35,7 +35,7 @@ namespace myAlfred0._5APIwAuthenticationStartupFramework
             PublicClientId = "self";
             OAuthOptions = new OAuthAuthorizationServerOptions
             {
-                TokenEndpointPath = new PathString("/api/Token"),//("/api/Token"),
+                TokenEndpointPath = new PathString("/api/Token"), //("/Token"),
                 Provider = new ApplicationOAuthProvider(PublicClientId),
                 AuthorizeEndpointPath = new PathString("/api/Account/ExternalLogin"),
                 AccessTokenExpireTimeSpan = TimeSpan.FromDays(14),

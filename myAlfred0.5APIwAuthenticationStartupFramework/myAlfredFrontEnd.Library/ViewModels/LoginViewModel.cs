@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using myAlfredFrontEnd.Library.Api;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +10,21 @@ namespace myAlfredFrontEnd.Library.ViewModels
 {
     public class LoginViewModel : Screen//(using refernce caliburn)
     {
-        private string _username; // Underscore is because it is a private backing field, sole pupose to supply and hold value for this property
+        private string _userName; // Underscore is because it is a private backing field, sole pupose to supply and hold value for this property
         private string _password;
+        private IAPIHelper _apiHelper;
+
+        public LoginViewModel(IAPIHelper apiHelper)
+        {
+            _apiHelper = apiHelper;
+        }
 
         public string UserName
         {
-            get { return _username; }
+            get { return _userName; }
             set 
             { 
-                _username = value;
+                _userName = value;
                 NotifyOfPropertyChange(() => UserName);
             }
         }
@@ -32,10 +39,10 @@ namespace myAlfredFrontEnd.Library.ViewModels
             }
         }
 
-        public bool CanLogIn(string username, string password)
+        public bool CanLogIn(string userName, string password)
         {
             bool output = false;
-            if (username.Length > 0 && password.Length > 0)
+            if (userName.Length > 0 && password.Length > 0)
             {
                 output = true;
             }
@@ -43,8 +50,9 @@ namespace myAlfredFrontEnd.Library.ViewModels
             return output;
         }
 
-        public void LogIn(string username, string password)
+        public async Task LogIn() //(string username, string password)
         {
+            var result = await _apiHelper.Authenticate(UserName, Password); // Result is an AuthenticatedUser model
             Console.WriteLine();
         }
 

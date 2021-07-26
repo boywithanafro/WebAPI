@@ -27,7 +27,7 @@ namespace myAlfredFrontEnd.Library.Api
             string api = ConfigurationManager.AppSettings["api"];
 
             apiClient = new HttpClient(); // Lives for lifespan of instance of react project
-            apiClient.BaseAddress = new Uri("");
+            apiClient.BaseAddress = new Uri(api);
             apiClient.DefaultRequestHeaders.Accept.Clear();
             apiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));//Getting Data data back
         }

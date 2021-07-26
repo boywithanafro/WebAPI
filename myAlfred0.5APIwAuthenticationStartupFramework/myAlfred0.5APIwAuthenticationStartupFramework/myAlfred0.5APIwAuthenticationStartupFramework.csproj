@@ -343,6 +343,10 @@
       <Project>{A60593A7-ACC9-4E2D-B979-12BB572DDFE7}</Project>
       <Name>myAlfredFramework.Library</Name>
     </ProjectReference>
+    <ProjectReference Include="..\myAlfredFrontEnd.Library\myAlfredFrontEnd.Library.csproj">
+      <Project>{2e77cbe3-8376-48ef-a762-ed483fdee6a8}</Project>
+      <Name>myAlfredFrontEnd.Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
